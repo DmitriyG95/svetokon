@@ -110,6 +110,20 @@ html, body {
 }
 
 /* Шапка */
+.header {
+  position: relative;
+}
+
+.header:after {
+  content: '';
+  position: absolute;
+  width: 497px;
+  height: 560px;
+  background-image: url("../images/icon/eclipse_top.svg");
+  right: 0;
+  top: -200px;
+}
+
 .header__top {
   background: #FAFAFA;
   padding: 40px 0;
@@ -195,16 +209,9 @@ html, body {
 .header__bottom {
   background: #FDEFE6;
   position: relative;
-}
-
-.header__bottom:after {
-  content: '';
-  position: absolute;
-  width: 497px;
-  height: 560px;
-  background-image: url("../images/icon/eclipse_top.svg");
-  right: 0;
-  top: -200px;
+  -webkit-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
 }
 
 .header__bottom .container {
@@ -359,6 +366,9 @@ html, body {
 }
 
 @media (max-width: 992px) {
+  .header:after {
+    display: none;
+  }
   .header__bottom {
     display: none;
   }
@@ -393,12 +403,14 @@ html, body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    position: relative;
+    position: fixed;
+    top: 20px;
+    right: 20px;
     width: 47px;
     height: 47px;
     border-radius: 50%;
     background: #FDEFE6;
-    z-index: 2;
+    z-index: 3;
   }
   .header__burger-btn span {
     display: -webkit-box;
@@ -417,6 +429,21 @@ html, body {
   .header__logo {
     max-width: 114px;
   }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 998;
+}
+
+.sticky .header__link > a {
+  padding: 20px 30px;
+}
+
+.sticky .header__other-links > a {
+  padding: 20px 30px;
 }
 
 /* бургер меню */

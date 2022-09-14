@@ -10,6 +10,28 @@ $(function() {
     $('.burger__close-brg').on('click',function(){
         $('.burger').removeClass('active')
     })
+
+    /* Липкое меню */
+   
+
+    var navbar = document.querySelector(".header__bottom");
+    var headerTop = document.querySelector('.header__top')
+    var navbarHeight = navbar.offsetHeight
+
+    var sticky = navbar.offsetTop;
+
+    function fixedHeader() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+        headerTop.style.paddingBottom = navbarHeight + 'px'
+      } else {
+        navbar.classList.remove("sticky");
+        headerTop.style.paddingBottom =  '40px'
+      }
+    }
+    if (window.matchMedia("(min-width: 992px)").matches) {
+        window.onscroll = function() {fixedHeader()};
+    } 
     /* main slider */
     document.querySelectorAll('.main-slider').forEach(n => {
       const topSlider = new Swiper(n.querySelector('.swiper'), {
@@ -53,21 +75,19 @@ $(function() {
                 el: n.querySelector('  .swiper-pagination'),
             },
             breakpoints: {
-                // when window width is >= 320px
                 320: {
                   slidesPerView: 1,
                   spaceBetween: 10
                 },
-                // when window width is >= 480px
-                990: {
+                768: {
                   slidesPerView: 2,
-                  spaceBetween: 30
+                  spaceBetween: 20
                 },
-                // when window width is >= 640px
-                1400: {
+                1200: {
                   slidesPerView: 3,
-                  spaceBetween: 40
-                }
+                  spaceBetween: 20
+                },
+                
               }
         });
   

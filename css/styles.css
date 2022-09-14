@@ -26,6 +26,12 @@ html, body {
   border-radius: 200px;
 }
 
+@media (max-width: 360px) {
+  .btn {
+    font-size: 11px;
+  }
+}
+
 .btn--green {
   background-color: #4DB058;
   color: #fff;
@@ -183,7 +189,7 @@ html, body {
   font-weight: 500;
   font-size: 16px;
   line-height: 18.75px;
-  color: #333333;
+  color: #535353;
 }
 
 .header__bottom {
@@ -1042,10 +1048,16 @@ html, body {
 }
 
 @media (max-width: 1560px) {
+  .our-solution {
+    margin: 100px 0 0 0;
+  }
   .our-solution__link {
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 18px;
     padding-top: 20px;
+  }
+  .our-solution__link svg {
+    height: 15px;
   }
   .our-solution__img {
     margin-bottom: 20px;
@@ -1275,6 +1287,16 @@ html, body {
     margin-bottom: 15px;
     padding-bottom: 15px;
   }
+  .form__buttons {
+    margin-top: 30px;
+  }
+  .form__buttons input {
+    height: 60px;
+  }
+  .form__buttons .btn {
+    height: 60px;
+    letter-spacing: 0.1em;
+  }
 }
 
 @media (max-width: 1260px) {
@@ -1291,15 +1313,6 @@ html, body {
     width: 10px;
     height: 10px;
     top: 3px;
-  }
-  .form__buttons {
-    margin-top: 30px;
-  }
-  .form__buttons input {
-    height: 45px;
-  }
-  .form__buttons .btn {
-    height: 45px;
   }
 }
 
@@ -1472,13 +1485,13 @@ html, body {
     line-height: 150px;
   }
   .how-order .form__buttons .btn {
-    padding: 0 10px;
+    padding: 0 20px;
   }
   .how-order .form__buttons .btn svg {
     display: none;
   }
   .how-order .form__buttons input {
-    padding: 0 10px;
+    padding: 0 20px;
     font-size: 18px;
   }
   .how-order .form__buttons input::-webkit-input-placeholder {
@@ -1495,6 +1508,12 @@ html, body {
   }
   .how-order .form__buttons input::placeholder {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 1560px) {
+  .how-order {
+    margin: 100px 0 0 0;
   }
 }
 
@@ -1672,6 +1691,12 @@ html, body {
   color: #313237;
 }
 
+@media (max-width: 1560px) {
+  .about-us {
+    margin: 100px 0 0 0;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1560px) {
   .about-us__title {
     font-size: 50px;
@@ -1827,6 +1852,12 @@ html, body {
   color: #718797;
 }
 
+@media (max-width: 1560px) {
+  .advantages {
+    margin: 100px 0 0 0;
+  }
+}
+
 @media (max-width: 1400px) {
   .advantages__cont {
     -ms-grid-columns: (1fr)[2];
@@ -1856,6 +1887,12 @@ html, body {
   .advantages__text {
     font-size: 16px;
     line-height: 26px;
+  }
+}
+
+@media (max-width: 576px) {
+  .advantages__text {
+    padding: 0 8px;
   }
 }
 
@@ -1914,7 +1951,7 @@ html, body {
       -ms-flex-flow: column;
           flex-flow: column;
   row-gap: 30px;
-  width: calc(100% - 260px);
+  width: 100%;
 }
 
 .reviews__name {
@@ -2016,13 +2053,19 @@ html, body {
   background-color: #4DB058;
 }
 
+@media (max-width: 1560px) {
+  .reviews {
+    margin: 100px 0 0 0;
+  }
+}
+
 @media (max-width: 576px) {
   .reviews__block {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
-    padding: 10px;
+    padding: 10px 30px;
   }
   .reviews__img {
     width: 100%;
@@ -2152,6 +2195,7 @@ html, body {
   font-size: 20px;
   line-height: 34px;
   margin-bottom: 5px;
+  color: #535353;
 }
 
 .accessories__list li span:last-child {
@@ -2203,6 +2247,12 @@ html, body {
   max-width: 410px;
 }
 
+@media (max-width: 1560px) {
+  .accessories {
+    margin: 100px 0 0 0;
+  }
+}
+
 @media (min-width: 992px) and (max-width: 1560px) {
   .accessories__img {
     margin-bottom: 20px;
@@ -2216,8 +2266,11 @@ html, body {
     padding-top: 20px;
   }
   .accessories__more a {
-    font-size: 26px;
-    line-height: 28px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .accessories__more a svg {
+    height: 15px;
   }
 }
 
@@ -2446,6 +2499,12 @@ html, body {
   line-height: 26px;
 }
 
+@media (max-width: 1560px) {
+  .benefits {
+    margin: 100px 0 0 0;
+  }
+}
+
 @media (min-width: 992px) and (max-width: 1560px) {
   .benefits__block {
     padding: 20px;
@@ -2566,6 +2625,12 @@ html, body {
   margin-bottom: 20px;
 }
 
+@media (max-width: 1560px) {
+  .partners {
+    margin: 100px 0 0 0;
+  }
+}
+
 @media (max-width: 768px) {
   .partners__cont {
     margin: 20px 0 0 0;
@@ -2674,8 +2739,8 @@ html, body {
 
 .footer__our-work {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 140%;
   letter-spacing: 0.03em;
   color: #333333;
   -webkit-transition: .5s ease-in-out;
@@ -2715,15 +2780,15 @@ html, body {
 
 .footer__contact-text {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 140%;
   letter-spacing: 0.03em;
 }
 
 .footer__contact-text a {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 140%;
   letter-spacing: 0.03em;
   text-decoration: none;
   color: #333;
